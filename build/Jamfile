@@ -7,14 +7,18 @@
 # Official repository: https://github.com/CPPAlliance/tls
 #
 
+using openssl ;
+
 project boost/tls
     : requirements
       <link>shared:<define>BOOST_TLS_DYN_LINK=1
       <link>static:<define>BOOST_TLS_STATIC_LINK=1
       <define>BOOST_TLS_SOURCE
+      <library>/openssl//ssl
     : usage-requirements
       <link>shared:<define>BOOST_TLS_DYN_LINK=1
       <link>static:<define>BOOST_TLS_STATIC_LINK=1
+      <library>/openssl//ssl
     : source-location ../src
     ;
 
