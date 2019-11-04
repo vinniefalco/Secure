@@ -15,10 +15,12 @@ project boost/tls
       <link>static:<define>BOOST_TLS_STATIC_LINK=1
       <define>BOOST_TLS_SOURCE
       <library>/openssl//ssl
+      <library>/openssl//crypto
     : usage-requirements
       <link>shared:<define>BOOST_TLS_DYN_LINK=1
       <link>static:<define>BOOST_TLS_STATIC_LINK=1
       <library>/openssl//ssl
+      <library>/openssl//crypto
     : source-location ../src
     ;
 
